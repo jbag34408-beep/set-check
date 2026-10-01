@@ -38,4 +38,13 @@ public class Checkctr {
         public List<ComputerSetting> findSettingByComputer(@PathVariable long computerId){
         return computerSettingService.findSettingByComputer(computerId);
     }
+    @GetMapping("/computers")
+    public List<Computer> getComputers() {
+        return computerRe.findAll();
+    }
+
+    @GetMapping("/setting")
+    public List<Setting> getSettings() {
+        return settingRe.findAll();
+    }
 }
